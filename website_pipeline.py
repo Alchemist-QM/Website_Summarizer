@@ -1,16 +1,17 @@
+import os 
 import asyncio
 import tiktoken
-from typing import Optional
-from website_url_converter import URLConverter
-from domain_selector import DomainController
-from docling_core.transforms.chunker.tokenizer.openai import OpenAITokenizer
-from file_summarizer import FileSummarizer
 from pathlib import Path 
-from domain_finder import DomainResearchAssistant
-from lateral_searcher.description_generator import genearate_search_query
+from typing import Optional
 from research_config import *
 from dotenv import load_dotenv
-import os
+from file_summarizer import FileSummarizer
+from domain_selector import DomainController
+from website_url_converter import URLConverter
+from domain_finder import DomainResearchAssistant
+from lateral_searcher.description_generator import genearate_search_query
+from docling_core.transforms.chunker.tokenizer.openai import OpenAITokenizer
+
 
 def get_valid_file_path(path_str: str) -> Path:
     path = Path(path_str).expanduser().resolve()
