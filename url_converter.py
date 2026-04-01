@@ -1,12 +1,12 @@
-from docling.document_converter import DocumentConverter
+import json
 import asyncio
-from docling.chunking import HybridChunker 
-import json 
 import hashlib
+import tiktoken
 from pathlib import Path
 from datetime import datetime
 from crawl4ai import AsyncWebCrawler
-import tiktoken
+from docling.chunking import HybridChunker 
+from docling.document_converter import DocumentConverter
 from docling_core.transforms.chunker.tokenizer.openai import OpenAITokenizer
 from crawl4ai.async_configs import BrowserConfig, CrawlerRunConfig, DefaultMarkdownGenerator
 
